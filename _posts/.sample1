@@ -1,0 +1,23 @@
+---
+layout: post
+title: "논문 공부 리스트" 
+date:   2021-07-08
+categories: 논문 paper
+---
+---
+## GAN [[pytorch-GANs]]
+#### RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion [[RL-GAN]]
+---
+## RL
+#### C51 : A Distributional Perspective on Reinforcement Learning [[C51]]
+#### QR-DQN : Distributional Reinforcement Learning with Quantile Regression [[QR-DQN]]
+#### IQN : Implicit Quantile Networks for Distributional Reinforcement Learning [[IQN]]
+---
+## ETC
+---
+
+[pytorch-GANs]: https://github.com/eriklindernoren/PyTorch-GAN.git
+[RL-GAN]: https://arxiv.org/abs/1904.12304
+[IQN]: https://arxiv.org/abs/1806.06923
+[QR-DQN]: https://arxiv.org/abs/1710.10044
+[C51]: https://arxiv.org/abs/1707.06887
