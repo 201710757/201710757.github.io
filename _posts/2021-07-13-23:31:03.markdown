@@ -4,7 +4,8 @@ title: "스크린샷 업무 자동화"
 date: 2021-07-13
 categories: auto pyautogui png pdf
 ---
-'''
+---
+```
 import pyautogui
 
 page = 250
@@ -14,7 +15,7 @@ for i in range(page):
     except:
         pass
     pyautogui.click(900,2000, button='left', clicks=1, interval=1)
-'''
+```
 ## 몇년전 공익근무 관련 업무자동화로 이슈가 있었던 토픽입니다!
 ## 엄청난 스크린샷 업무를 파이썬 하나를 통해 몇달걸일 일을 단숨에 끝냈다고 하네요.
 
