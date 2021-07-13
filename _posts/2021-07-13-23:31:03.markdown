@@ -4,7 +4,6 @@ title: "스크린샷 업무 자동화"
 date: 2021-07-13
 categories: auto pyautogui png pdf
 ---
----
 '''
 import pyautogui
 
