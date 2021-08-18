@@ -23,9 +23,6 @@ plainwhite:
     - page
     - post
   # generate social links in footer
-  navigation:
-    - title: Test
-      url: "/test"
   social_links:
     #twitter: samarsault
     github:  201710757
