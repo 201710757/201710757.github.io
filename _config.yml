@@ -59,8 +59,6 @@ plugins:
 #  - jekyll-feed
 
 # Analytics
-analytics:
-  provider: "google" 
-  google:
-    tracking_id: "G-2MMKGS8TBB"
-    anonymize_ip: false
+plainwhite:
+  analytics_id: "G-2MMKGS8TBB"
+

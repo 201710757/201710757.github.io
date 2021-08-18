@@ -15,7 +15,6 @@ echo "date: ${today}" >> ${today}-${today_times}.markdown
 echo "categories: ${categories}" >> ${today}-${today_times}.markdown
 echo "---" >> ${today}-${today_times}.markdown
 
-echo "---" >> ${today}-${today_times}.markdown
 echo "Test" >> ${today}-${today_times}.markdown
 
 echo "---" >> ${today}-${today_times}.markdown
