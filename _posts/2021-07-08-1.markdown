@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "논문 공부 리스트" 
-date:   2021-08-18
+date:   2021-07-08
 categories: 논문 paper
 ---  
-읽고 공부할 논문들,
-
+Last Update : 2021-08-18  
+읽고 공부할 논문들  
+--- 
 
 **GAN** [[pytorch-GANs]]  
 RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion [[RL-GAN]]
