@@ -60,8 +60,7 @@ plugins:
 
 # Analytics
 analytics:
-  provider               : "google-gtag" 
-                          # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider: "google" 
   google:
-    tracking_id          : "G-2MMKGS8TBB"
-    anonymize_ip         : # true, false (default)
+    tracking_id: "G-2MMKGS8TBB"
+    anonymize_ip: false
