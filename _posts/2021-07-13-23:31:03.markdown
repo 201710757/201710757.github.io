@@ -11,7 +11,7 @@ categories: auto pyautogui png pdf
 
 우선 전체코드는 다음과 같습니다.      
    
-```
+```python
 import pyautogui
 
 page = 250
@@ -22,19 +22,19 @@ for i in range(page):
         pass
     pyautogui.click(900,2000, button='left', clicks=1, interval=1)
 ```
-```
+```python
 import pyautogui
 ```
 먼저, 우리가 사용할 라이브러리는 pyautogui 입니다.   
 이 라이브러리를 통해 스크린샷과 원하는 위치를 클릭하는 기능을 구현할 것입니다.   
   
   
-```
+```python
 page = 250
 ```
 페이지는 원하시는만큼 할당해 주시고, 
 
-```
+```python
 for i in range(page):
     try:
         pyautogui.screenshot('filename'+str(i)+'.png', region=(200,300, 300,300))
@@ -45,7 +45,7 @@ for i in range(page):
 위치를 지정해줘야 하는데 region에 차례로 시작할 x좌표, y좌표, x크기, y크기 가 들어가게 됩니다.   
 try 문으로 감싸주는것은 대용량 작업시 뻑날 경우를 대비해서 추가해보았습니다 ㅋㅋ   
    
-```
+```python
 pyautogui.click(900,2000, button='left', clicks=1, interval=1)
 ```
 마지막으로, 클릭해서 페이지를 넘기거나 정보를 수정해야 하기 때문에, pyautogui.click함수를 활용하여 클릭을 하게 됩니다. 
