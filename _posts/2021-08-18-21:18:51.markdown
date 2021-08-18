@@ -4,7 +4,7 @@ title: "scp 우분투 파일전송"
 date: 2021-08-18
 categories: scp ubuntu file trasfer
 ---
-command를 통해 우분투로 파일 또는 폴더를 보내고 받기를 해봅시다!
+command를 통해 **우분투로 파일 또는 폴더를 보내고 받기**를 해봅시다!
 
 
 
