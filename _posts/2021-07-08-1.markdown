@@ -1,23 +1,32 @@
 ---
 layout: post
 title: "논문 공부 리스트" 
-date:   2021-07-08
+date:   2021-08-18
 categories: 논문 paper
----
----
-GAN [[pytorch-GANs]]  
-RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion [[RL-GAN]]  
----
-RL  
+---  
+읽고 공부할 논문들,
+
+
+**GAN** [[pytorch-GANs]]  
+RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion [[RL-GAN]]
+
+
+**RL**  
+Double-DQN : Deep Reinforcement Learning with Double Q-learning [[Double-DQN]]  
+Dueling-DQN : Dueling Network Architectures for Deep Reinforcement Learning [[Dueling-DQN]]  
 C51 : A Distributional Perspective on Reinforcement Learning [[C51]]  
 QR-DQN : Distributional Reinforcement Learning with Quantile Regression [[QR-DQN]]  
 IQN : Implicit Quantile Networks for Distributional Reinforcement Learning [[IQN]]  
----
-ETC  
----
+
+
+**ETC**  
+Noisy Network : Noisy Networks for Exploration [[Noisy-Net]]
 
 [pytorch-GANs]: https://github.com/eriklindernoren/PyTorch-GAN.git
 [RL-GAN]: https://arxiv.org/abs/1904.12304
 [IQN]: https://arxiv.org/abs/1806.06923
 [QR-DQN]: https://arxiv.org/abs/1710.10044
 [C51]: https://arxiv.org/abs/1707.06887
+[Noisy-Net]: https://arxiv.org/abs/1706.10295
+[Double-DQN]: https://arxiv.org/abs/1509.06461
+[Dueling-DQN]: https://arxiv.org/abs/1511.06581
