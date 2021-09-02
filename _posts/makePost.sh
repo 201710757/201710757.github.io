@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 title=${1}
 categories=${@:2}
