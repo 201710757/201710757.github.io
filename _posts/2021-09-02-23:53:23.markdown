@@ -14,7 +14,7 @@ distribution 기반인 **Distributional Bellman Equation**을 사용한다.
 
 식은 다음과 같다  
 $
-Z(x, a)\overset{\underset{\mathrm{def}}{}}{=} \!\, R(x, a) + γZ(X', A')
+Z(x, a)\overset{\underset{\mathrm{def}}{}}{=}, R(x, a) + γZ(X', A')
 $
 
 우리가 익히 알고 있던 $Q(x, a) {=} R(x, a) + γQ(X', A')$ 과 비교해보면 단순 ${Q}$가 $Z$로 바뀐것밖에 없다.  
