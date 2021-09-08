@@ -65,7 +65,7 @@ Projection이란 **실제 Support**가 [1,2,3,4,5]와 같고, **Target Distribut
 **target Distribution의** support가 1.3인 **support의 확률값**을 **main network**의 support 1과 2에 해당하는 곳에 각각 **분배**하게 됩니다.  
 나누는 기준은 1.3은 1에 **가깝기 때문에 더 많이** 배분되고 2에는 **멀기 때문에 더 적게** 배분됩니다.  
 
-해당하는 sudo 코드는 다음과 같습니다.   
+해당하는 pseudocode 코드는 다음과 같습니다.   
 $
 l ← \lfloor{b_j}\rfloor,   u ← \lceil{b_j}\rceil  
 $  
