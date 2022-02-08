@@ -4,7 +4,7 @@ title: "논문 공부 리스트"
 date:   2021-07-08
 categories: 논문 paper
 ---  
-Last Update : 2021-09-04  
+Last Update : 2022-02-08  
 **읽고 공부할 논문들**  
 
 
@@ -20,6 +20,11 @@ Dueling-DQN : Dueling Network Architectures for Deep Reinforcement Learning [[Du
 C51 : A Distributional Perspective on Reinforcement Learning [[C51]]  
 QR-DQN : Distributional Reinforcement Learning with Quantile Regression [[QR-DQN]]  
 IQN : Implicit Quantile Networks for Distributional Reinforcement Learning [[IQN]]  
+  
+
+**Meta-RL**
+Learn2Learn Framework : Framework like stablebaseline[[L2L_site]]   
+Learning2RL : Learning to reinforcement learn [[Learning2RL]][[Learning2RL_GITHUB]]  
   
   
 **MARL**  
@@ -44,5 +49,6 @@ Noisy Network : Noisy Networks for Exploration [[Noisy-Net]]
 [MAAC]: https://arxiv.org/abs/1810.02912
 [DQN-2013]: https://arxiv.org/abs/1312.5602
 [DQN-2015]: https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf
-
-
+[L2L_site] : http://learn2learn.net/tutorials/anil_tutorial/ANIL_tutorial/
+[Learning2RL] : https://arxiv.org/abs/1611.05763
+[Learning2RL_GITHUB] : https://github.com/Phu-archive/Learning2RL
