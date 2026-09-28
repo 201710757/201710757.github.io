@@ -19,14 +19,6 @@ about: >-
   language models and fMRI encoders. During my M.S. and B.S., I built neuroscience-inspired
   reinforcement learning agents that adapt quickly through prefrontal meta-control.
 
-news:
-  - date: Oct. 2026
-    text: "Our work on whole-brain breath-state real-time fMRI neurofeedback was selected for an **oral presentation** at rtFIN 2026 (Geneva, Oct. 4–7)."
-  - date: Jul. 2026
-    text: "**BIT-LLM**, our LLM-based fMRI-to-text decoder, appeared at ICML 2026."
-  - date: Feb. 2026
-    text: Received an Encouragement Paper Award at the 2026 Brain & AI Symposium (Brain Engineering Society of Korea).
-
 interests:
   - Real-time fMRI neurofeedback
   - Interoception
@@ -78,6 +70,11 @@ publications:
             url: https://doi.org/10.3745/KTSDE.2022.11.10.427
   - group: Conference papers & abstracts
     items:
+      - authors: "**Kim, J. H.**, Kang, J.-E., Choi, H., Kim, Y., Kim, J., Kim, H., & Lee, J.-H."
+        title: Whole-Brain Breath-State Real-Time fMRI Neurofeedback Links Decoder-Guided Regulation to Salience-Network
+        venue: "*Real-Time Functional Imaging and Neurofeedback Meeting (rtFIN 2026)*, Geneva, Switzerland"
+        year: 2026
+        note: Oral presentation
       - authors: Lee, S., **Kim, J. H.**, Kim, C. L., Park, J. Y., & Lee, J.-H.
         title: "BIT-LLM: Brain Instruction Tuned LLM with Persistent Cross-Attention for fMRI-to-Text Decoding"
         venue: "*Forty-third International Conference on Machine Learning (ICML)*"
@@ -87,11 +84,6 @@ publications:
             url: https://icml.cc/virtual/2026/poster/65031
           - label: OpenReview
             url: https://openreview.net/forum?id=HZhlRnJOHq
-      - authors: "**Kim, J. H.**, Kang, J.-E., Choi, H., Kim, Y., Kim, J., Kim, H., & Lee, J.-H."
-        title: Whole-Brain Breath-State Real-Time fMRI Neurofeedback Links Decoder-Guided Regulation to Salience-Network
-        venue: "*Real-Time Functional Imaging and Neurofeedback Meeting (rtFIN 2026)*, Geneva, Switzerland"
-        year: 2026
-        note: Oral presentation
       - authors: "**Kim, J. H.**, & Lee, J. H."
         title: Prefrontal meta-control enables the improved adaptivity of reinforcement learning agents
         venue: "*The 6th Multidisciplinary Conference on Reinforcement Learning and Decision Making (RLDM)*"
@@ -118,7 +110,7 @@ publications:
 patents:
   - title: System and method for experiment control and adaptive feedback for real-time fMRI-based interoceptive neurofeedback
     title_ko: 실시간 기능적 자기공명영상 기반 인테로셉션 뉴로피드백을 위한 실험 제어 및 적응형 피드백 시스템 및 방법
-    inventors: Lee, J.-H., & **Kim, J. H.**
+    inventors: "**Kim, J. H.**, & Lee, J.-H."
     number: Korean Provisional Patent Application No. 10-2026-0064578
     date: Filed Apr. 2026
 
