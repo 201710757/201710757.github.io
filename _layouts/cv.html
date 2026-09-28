@@ -1,0 +1,201 @@
+{%- assign cv = site.data.cv -%}
+{%- assign p = cv.profile -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    /* Shares the "theme" cookie with the blog's dark-mode toggle. */
+    (function () {
+      var m = document.cookie.match('(^|;) ?theme=([^;]*)(;|$)');
+      var t = m ? m[2] : null;
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/assets/css/cv.css" | relative_url }}">
+  {% seo title=false %}
+  <title>{{ p.name }} · {{ p.position }}, {{ p.affiliation }}</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="{{ "/" | relative_url }}">{{ p.name }}</a>
+      <nav class="sections" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#skills">Skills</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="blog-link" href="{{ "/blog/" | relative_url }}">Blog</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <section class="hero" id="about">
+      <h1 class="name">{{ p.name }} <span class="name-ko" lang="ko">{{ p.name_ko }}</span></h1>
+      <p class="role">{{ p.position }}, {{ p.department }}<br>{{ p.affiliation }} · {{ p.location }}</p>
+      <ul class="contact">
+        <li><a href="mailto:{{ p.email }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>{{ p.email }}</a></li>
+        <li><a href="https://github.com/{{ p.github }}" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub</a></li>
+        <li><a href="https://orcid.org/{{ p.orcid }}" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 10v7M9 7v.01M13 10h1.5a3.5 3.5 0 0 1 0 7H13z"/></svg>ORCID</a></li>
+      </ul>
+      <p class="about">{{ cv.about }}</p>
+      <ul class="tags" aria-label="Research interests">
+        {%- for t in cv.interests %}
+        <li>{{ t }}</li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      {%- for e in cv.education %}
+      <div class="entry">
+        <div class="when">{{ e.period }}</div>
+        <div class="what">
+          <h3>{{ e.degree }}</h3>
+          <p class="org">{{ e.school }}</p>
+          {%- if e.thesis %}<p class="meta">Thesis: <em>{{ e.thesis }}</em></p>{% endif %}
+          <p class="meta">
+            {%- if e.advisor %}Advisor: {{ e.advisor }}{% endif -%}
+            {%- if e.advisor and e.gpa %} · {% endif -%}
+            {%- if e.gpa %}GPA {{ e.gpa }}{% endif -%}
+          </p>
+        </div>
+      </div>
+      {%- endfor %}
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      {%- for g in cv.publications %}
+      <h3 class="group">{{ g.group }}</h3>
+      <ol class="pubs">
+        {%- for pub in g.items %}
+        <li>
+          <p class="pub-title">{{ pub.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+          <p class="pub-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+          <p class="pub-venue">
+            {{- pub.venue | markdownify | remove: '<p>' | remove: '</p>' | strip -}}
+            {%- if pub.year %}, {{ pub.year }}{% endif -%}
+          </p>
+          {%- if pub.note or pub.links %}
+          <p class="pub-extra">
+            {%- if pub.note %}<span class="badge">{{ pub.note }}</span>{% endif -%}
+            {%- for l in pub.links %}
+            <a class="pill" href="{% if l.url contains '://' %}{{ l.url }}{% else %}{{ l.url | relative_url }}{% endif %}">{{ l.label }}</a>
+            {%- endfor %}
+          </p>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ol>
+      {%- endfor %}
+
+      <h3 class="group">Patents</h3>
+      <ol class="pubs">
+        {%- for pt in cv.patents %}
+        <li>
+          <p class="pub-title">{{ pt.title }}</p>
+          <p class="pub-ko" lang="ko">{{ pt.title_ko }}</p>
+          <p class="pub-authors">{{ pt.inventors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+          <p class="pub-venue">{{ pt.number }} · {{ pt.date }}</p>
+        </li>
+        {%- endfor %}
+      </ol>
+    </section>
+
+    <section id="projects">
+      <h2>Research Projects</h2>
+      {%- for pr in cv.projects %}
+      <div class="entry">
+        <div class="when">{{ pr.period }}</div>
+        <div class="what">
+          <h3>{{ pr.title }}</h3>
+          <p class="org">{{ pr.org }}</p>
+          {%- if pr.role %}<p class="meta">Role: {{ pr.role }}</p>{% endif %}
+        </div>
+      </div>
+      {%- endfor %}
+    </section>
+
+    <section id="awards">
+      <h2>Honors &amp; Awards</h2>
+      {%- for a in cv.awards %}
+      <div class="entry">
+        <div class="when">{{ a.year }}</div>
+        <div class="what">
+          <h3>{{ a.title }}</h3>
+          <p class="org">{{ a.org }}</p>
+          {%- if a.detail %}<p class="meta"><em>{{ a.detail }}</em></p>{% endif %}
+        </div>
+      </div>
+      {%- endfor %}
+      <h3 class="group">Before University</h3>
+      {%- for a in cv.early_awards %}
+      <div class="entry compact">
+        <div class="when">{{ a.year }}</div>
+        <div class="what">
+          <h3>{{ a.title }}</h3>
+          <p class="org">{{ a.org }}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="skills">
+        {%- for s in cv.skills %}
+        <dt>{{ s.label }}</dt>
+        <dd>{{ s.items }}</dd>
+        {%- endfor %}
+      </dl>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; {{ "now" | date: "%Y" }} {{ p.name }} · Last updated {{ site.time | date: "%b %Y" }} · <a href="{{ "/blog/" | relative_url }}">Blog</a></p>
+  </footer>
+
+  <script>
+    document.querySelector('.theme-toggle').addEventListener('click', function () {
+      var root = document.documentElement;
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      var d = new Date(); d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+      document.cookie = 'theme=' + next + ';path=/;SameSite=strict;expires=' + d.toGMTString();
+    });
+  </script>
+
+  {%- if site.plainwhite.analytics_id %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.plainwhite.analytics_id }}');
+  </script>
+  {%- endif %}
+</body>
+</html>

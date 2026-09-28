@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: "/scp/ubuntu/file/trasfer/2021/08/18/21-18-51.html"
 title: "scp 우분투 파일전송"
 date: 2021-08-18
 categories: scp ubuntu file trasfer

@@ -1,0 +1,225 @@
+---
+---
+
+// Styles for the CV homepage (_layouts/cv.html). Independent of the blog theme.
+
+:root {
+  --bg: #fcfcfb;
+  --surface: #ffffff;
+  --text: #1c1d1f;
+  --muted: #5d6168;
+  --faint: #8a8f97;
+  --rule: #e6e6e3;
+  --accent: #1f5bb5;
+  --accent-soft: #eaf1fb;
+  --badge: #8a5a00;
+  --badge-soft: #fbf3e2;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --when: 9.5rem;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #121315;
+  --surface: #1a1b1e;
+  --text: #e6e6e3;
+  --muted: #a3a7ae;
+  --faint: #7d828a;
+  --rule: #2b2d31;
+  --accent: #8ab4f8;
+  --accent-soft: #1b2a40;
+  --badge: #f0c36a;
+  --badge-soft: #2e2615;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+p { margin: 0; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--surface); padding: .5rem 1rem; z-index: 20;
+  &:focus { left: 1rem; top: .5rem; }
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+.topbar-inner {
+  max-width: 60rem; margin: 0 auto; padding: .7rem 1.5rem;
+  display: flex; align-items: center; gap: 1.5rem;
+}
+.brand {
+  font-family: var(--serif); font-weight: 600; font-size: 1.05rem;
+  color: var(--text); white-space: nowrap;
+  &:hover { text-decoration: none; color: var(--accent); }
+}
+.sections {
+  display: flex; gap: 1.1rem; flex: 1; overflow-x: auto; scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+  a { color: var(--muted); font-size: .875rem; white-space: nowrap; }
+  a:hover { color: var(--text); text-decoration: none; }
+}
+.topbar-actions { display: flex; align-items: center; gap: .75rem; margin-left: auto; }
+.blog-link {
+  font-size: .875rem; font-weight: 500; color: var(--text);
+  padding: .3rem .8rem; border: 1px solid var(--rule); border-radius: 999px;
+  &:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+}
+.theme-toggle {
+  display: inline-grid; place-items: center;
+  width: 2rem; height: 2rem; padding: 0;
+  background: none; border: 1px solid var(--rule); border-radius: 999px;
+  color: var(--muted); cursor: pointer;
+  &:hover { color: var(--text); border-color: var(--muted); }
+  svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-sun { display: none; }
+}
+:root[data-theme="dark"] .theme-toggle {
+  .icon-sun { display: block; }
+  .icon-moon { display: none; }
+}
+
+/* ---------- Page ---------- */
+.page { max-width: 60rem; margin: 0 auto; padding: 0 1.5rem; }
+
+section { padding: 2.5rem 0 1rem; }
+
+h2 {
+  font-family: var(--serif); font-weight: 600; font-size: 1.35rem; letter-spacing: -.01em;
+  margin: 0 0 1.25rem; padding-bottom: .5rem; border-bottom: 1px solid var(--rule);
+}
+h3 { margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.45; }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: 3.5rem; padding-bottom: 1.5rem; }
+.name {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(2.2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: -.02em;
+  margin: 0 0 .6rem;
+}
+.name-ko { font-family: var(--sans); font-weight: 400; font-size: .5em; color: var(--faint); letter-spacing: 0; margin-left: .35rem; }
+.role { color: var(--muted); font-size: 1.05rem; line-height: 1.55; }
+.contact {
+  list-style: none; padding: 0; margin: 1.1rem 0 0;
+  display: flex; flex-wrap: wrap; gap: .5rem 1.25rem;
+  a { display: inline-flex; align-items: center; gap: .4rem; font-size: .925rem; }
+  svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+}
+.about { margin-top: 1.75rem; max-width: 44rem; font-size: 1.02rem; line-height: 1.7; }
+.tags {
+  list-style: none; padding: 0; margin: 1.1rem 0 0;
+  display: flex; flex-wrap: wrap; gap: .45rem;
+  li {
+    font-size: .8rem; font-weight: 500; color: var(--accent);
+    background: var(--accent-soft); padding: .22rem .65rem; border-radius: 999px;
+  }
+}
+
+/* ---------- Timeline entries ---------- */
+.entry {
+  display: grid; grid-template-columns: var(--when) 1fr; gap: .25rem 1.5rem;
+  padding: .7rem 0;
+  & + .entry { border-top: 1px dashed var(--rule); }
+  &.compact { padding: .45rem 0; }
+}
+.when { color: var(--faint); font-size: .875rem; font-variant-numeric: tabular-nums; padding-top: .1rem; }
+.org { color: var(--muted); font-size: .95rem; }
+.meta { color: var(--muted); font-size: .9rem; margin-top: .15rem; }
+.meta:empty { display: none; }
+
+.group {
+  font-family: var(--sans); font-size: .78rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--faint);
+  margin: 1.75rem 0 .5rem;
+  h2 + & { margin-top: 0; }
+}
+
+/* ---------- Publications ---------- */
+.pubs {
+  margin: 0; padding: 0 0 0 1.6rem;
+  li { padding: .55rem 0 .6rem .3rem; }
+  li::marker { color: var(--faint); font-size: .85rem; font-variant-numeric: tabular-nums; }
+}
+.pub-title { font-weight: 600; line-height: 1.45; }
+.pub-ko { color: var(--muted); font-size: .9rem; margin-top: .1rem; }
+.pub-authors { color: var(--muted); font-size: .925rem; margin-top: .15rem;
+  strong { color: var(--text); font-weight: 600; }
+}
+.pub-venue { color: var(--muted); font-size: .925rem; }
+.pub-extra { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; margin-top: .4rem; }
+.pill {
+  font-size: .75rem; font-weight: 600; letter-spacing: .02em;
+  padding: .12rem .55rem; border: 1px solid var(--rule); border-radius: 6px; color: var(--muted);
+  &:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+}
+.badge {
+  font-size: .75rem; font-weight: 600;
+  padding: .12rem .55rem; border-radius: 6px; color: var(--badge); background: var(--badge-soft);
+}
+
+/* ---------- Skills ---------- */
+.skills {
+  display: grid; grid-template-columns: var(--when) 1fr; gap: .55rem 1.5rem; margin: 0;
+  dt { color: var(--faint); font-size: .875rem; padding-top: .1rem; }
+  dd { margin: 0; }
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  max-width: 60rem; margin: 3rem auto 0; padding: 1.5rem 1.5rem 2.5rem;
+  color: var(--faint); font-size: .85rem; border-top: 1px solid var(--rule);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 720px) {
+  .topbar-inner { padding: .6rem 1rem; gap: 1rem; }
+  .sections { display: none; }
+  .page { padding: 0 1rem; }
+  .footer { padding-left: 1rem; padding-right: 1rem; }
+  .hero { padding-top: 2.25rem; }
+  .entry, .skills { grid-template-columns: 1fr; gap: .1rem; }
+  .skills dd { margin-bottom: .6rem; }
+  .pubs { padding-left: 1.3rem; }
+}
+
+/* ---------- Print: the page doubles as a printable CV ---------- */
+@media print {
+  :root, :root[data-theme="dark"] {
+    --bg: #fff; --surface: #fff; --text: #000; --muted: #333; --faint: #555; --rule: #ccc;
+    --accent: #000; --accent-soft: transparent; --badge: #000; --badge-soft: transparent;
+  }
+  body { font-size: 10.5pt; }
+  .topbar, .skip-link, .footer, .pill, .theme-toggle { display: none !important; }
+  .page { max-width: none; padding: 0; }
+  section { padding: 1rem 0 .25rem; break-inside: auto; }
+  .entry, .pubs li { break-inside: avoid; }
+  .hero { padding-top: 0; }
+  .tags li { padding: 0; }
+  .tags li + li::before { content: "· "; }
+}

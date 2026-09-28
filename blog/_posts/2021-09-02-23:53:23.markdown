@@ -1,5 +1,6 @@
 ---
 layout: post
+redirect_from: "/rl/c51/paper/categorical/2021/09/02/23-53-23.html"
 title: "C51 review"
 date: 2021-09-02
 categories: RL C51 paper categorical
@@ -27,13 +28,13 @@ Distribution을 통해 **정확한 분포를 추정**하고 그에 따른 Q-valu
 
 
 Distributional RL은 **action마다 Distribution**을 갖고 있는데,  
-![value_distribution](/assets/rl_paper/value_distribution.png){: width="400", height="100"}  
+![value_distribution](/blog/assets/rl_paper/value_distribution.png){: width="400", height="100"}  
 **가로축**은 분포를 결정하기 위한 하이퍼파라미터로써 **support**라 불리며,   
 이 논문에선 51로 하였을 때 결과가 가장 좋았기 때문에 논문 이름도 C51이 되었습니다.  
 distribution의 **높이**는 각 support의 **확률**을 뜻합니다.
 
 
-![value_distribution](/assets/rl_paper/projection_sub.png){: width="400", height="100"}  
+![value_distribution](/blog/assets/rl_paper/projection_sub.png){: width="400", height="100"}  
 또한 이 **support의 최대, 최소값**을 지정해주게 되는데 이 MIN/MAX가 위 그림의 우하단과 같이, 추후 나올 projection에서도 사용됩니다.  
 
 다음으로, action마다 distribution이 존재하기 때문에 **모델의 아웃풋은 action 수 * support 수** 입니다.  
@@ -58,7 +59,7 @@ support가 **최소값**보다 작다면 ${V_{MIN}}$로 **맞춰주게** 됩니�
 
 
 ${γ_tz_j}$ 를 통해 **shirink**(보라)되고, $r_t$를 **더함**(초록)으로써 **강제**로 맞춰주려하면 아래 그림과 같이 **support의 범위**가 맞지 않게 됩니다.   
-![value_distribution](/assets/rl_paper/support_notEqual.png){: width="400", height="100"}  
+![value_distribution](/blog/assets/rl_paper/support_notEqual.png){: width="400", height="100"}  
 이렇게 되면 **같은 Domain**에 대해 **Cross Entropy Loss**를 구해야 하는데 그렇지 않기 때문에 **Projection**이란 과정을 추가합니다.  
 
 Projection이란 **실제 Support**가 [1,2,3,4,5]와 같고, **Target Distribution의 support**가 [1.3, 2.3, 3.5, 4.7, 4.9]이 되었을 때,  
@@ -82,7 +83,7 @@ $
 위 수식을 통해 main support의 거리에 맞게 target support의 값을 **알맞는 비율로 쪼개서 나누어**주게 됩니다.  
 
 결국 다음 그림과 같아집니다.  
-![value_distribution](/assets/rl_paper/projection_fin.png){: width="400", height="100"}  
+![value_distribution](/blog/assets/rl_paper/projection_fin.png){: width="400", height="100"}  
 support도 맞춰주었기 때문에 **같은 Domain에서 Loss를 구할 수 있게** 되었습니다.
 
 

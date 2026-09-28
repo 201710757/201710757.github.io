@@ -1,8 +1,10 @@
-title: JH Devs
-author: J
+title: Jihun Kim
+author: Jihun Kim
 email: neti2207@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  deep learning, reinforcement learning, machine learning
+  Jihun Kim — Ph.D. candidate in Brain and Cognitive Engineering at Korea University.
+  Real-time fMRI neurofeedback, brain decoding with large language models, and neuroscience-inspired reinforcement learning.
+url: "https://201710757.github.io"
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -10,8 +12,8 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: Jihoon Kim
-  tagline: Developer
+  name: Jihun Kim
+  tagline: Blog
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
@@ -46,16 +48,23 @@ plainwhite:
     # - username: jekyll2
     #   instance: example.com
   analytics_id: "G-2MMKGS8TBB"
+  navigation:
+    - title: CV
+      url: /
+    - title: Blog
+      url: /blog/
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 #header_pages:
 # - about.md
 
 # Build settings
-theme: plainwhite
+# Theme files (plainwhite) are vendored in this repo; no theme gem is needed.
+theme: null
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-redirect-from
 #  - jekyll-feed
 
 markdown: kramdown
@@ -63,3 +72,22 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+
+defaults:
+  - scope:
+      path: "blog"
+      type: posts
+    values:
+      permalink: /blog/:year/:month/:day/:title:output_ext
+
+exclude:
+  - readme.md
+  - readme_sub.md
+  - LICENSE.txt
+  - Gemfile
+  - Gemfile.lock
+  - plainwhite.gemspec
+  - screenshot.png
+  - dark.png
+  - blog/_posts/makePost.sh
+  - blog/_posts/makePost.command
