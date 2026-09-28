@@ -1,7 +1,12 @@
-# RL Blog
+# 201710757.github.io
 
-## Paper review & Implement
+Personal site of Jihun Kim — https://201710757.github.io
 
+- `/` — CV homepage. Edit content in `_data/cv.yml`; layout `_layouts/cv.html`, styles `assets/css/cv.scss`.
+- `/blog/` — blog (paper reviews & notes). Posts live in `blog/_posts/`, images in `blog/assets/`.
+  New post: `cd blog/_posts && ./makePost.sh "title" category1 category2`
+
+Built by GitHub Pages (Jekyll). Theme files are vendored from [plainwhite](https://github.com/samarsault/plainwhite-jekyll).
 
 ---
 ## MarkDown
