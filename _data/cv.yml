@@ -19,6 +19,14 @@ about: >-
   language models and fMRI encoders. During my M.S. and B.S., I built neuroscience-inspired
   reinforcement learning agents that adapt quickly through prefrontal meta-control.
 
+news:
+  - date: Oct. 2026
+    text: "Our work on whole-brain breath-state real-time fMRI neurofeedback was selected for an **oral presentation** at rtFIN 2026 (Geneva, Oct. 4–7)."
+  - date: Jul. 2026
+    text: "**BIT-LLM**, our LLM-based fMRI-to-text decoder, appeared at ICML 2026."
+  - date: Feb. 2026
+    text: Received an Encouragement Paper Award at the 2026 Brain & AI Symposium (Brain Engineering Society of Korea).
+
 interests:
   - Real-time fMRI neurofeedback
   - Interoception
@@ -31,7 +39,7 @@ education:
     degree: Ph.D., Brain and Cognitive Engineering
     school: Korea University, Seoul, Korea
     advisor: Prof. Jong-Hwan Lee
-    gpa: 4.0 / 4.5
+    gpa: 4.04 / 4.5
   - period: Sep. 2022 – Aug. 2024
     degree: M.S., Artificial Intelligence and Informatics
     school: Sangmyung University, Seoul, Korea
@@ -45,15 +53,6 @@ education:
     gpa: 4.11 / 4.5
 
 publications:
-  - group: Under review & in preparation
-    items:
-      - authors: Lee, S., **Kim, J. H.**, Kim, C. L., Park, J. Y., & Lee, J.-H.
-        title: "BIT-LLM: Brain Instruction Tuned LLM with Persistent Cross-Attention for fMRI-to-Text Decoding"
-        venue: Under review
-        year: 2026
-      - authors: "**Kim, J. H.**, Kim, S. H., Kim, D. H., & Lee, J. H."
-        title: Towards enhanced social adaptivity through the meta-control of agent’s learning strategies
-        venue: In preparation
   - group: Journal articles
     items:
       - authors: "**Kim, J. H.**, & Lee, J. H."
@@ -79,6 +78,20 @@ publications:
             url: https://doi.org/10.3745/KTSDE.2022.11.10.427
   - group: Conference papers & abstracts
     items:
+      - authors: Lee, S., **Kim, J. H.**, Kim, C. L., Park, J. Y., & Lee, J.-H.
+        title: "BIT-LLM: Brain Instruction Tuned LLM with Persistent Cross-Attention for fMRI-to-Text Decoding"
+        venue: "*Forty-third International Conference on Machine Learning (ICML)*"
+        year: 2026
+        links:
+          - label: ICML
+            url: https://icml.cc/virtual/2026/poster/65031
+          - label: OpenReview
+            url: https://openreview.net/forum?id=HZhlRnJOHq
+      - authors: "**Kim, J. H.**, Kang, J.-E., Choi, H., Kim, Y., Kim, J., Kim, H., & Lee, J.-H."
+        title: Whole-Brain Breath-State Real-Time fMRI Neurofeedback Links Decoder-Guided Regulation to Salience-Network
+        venue: "*Real-Time Functional Imaging and Neurofeedback Meeting (rtFIN 2026)*, Geneva, Switzerland"
+        year: 2026
+        note: Oral presentation
       - authors: "**Kim, J. H.**, & Lee, J. H."
         title: Prefrontal meta-control enables the improved adaptivity of reinforcement learning agents
         venue: "*The 6th Multidisciplinary Conference on Reinforcement Learning and Decision Making (RLDM)*"
@@ -96,6 +109,11 @@ publications:
             url: https://doi.org/10.1007/978-3-030-98404-5_9
           - label: PDF
             url: /assets/papers/kim2021_ihci_touching-minds.pdf
+  - group: In preparation
+    items:
+      - authors: "**Kim, J. H.**, Kim, S. H., Kim, D. H., & Lee, J. H."
+        title: Towards enhanced social adaptivity through the meta-control of agent’s learning strategies
+        venue: In preparation
 
 patents:
   - title: System and method for experiment control and adaptive feedback for real-time fMRI-based interoceptive neurofeedback
@@ -105,6 +123,14 @@ patents:
     date: Filed Apr. 2026
 
 projects:
+  - period: 2026 – Present
+    title: Multimodal Foundation Model for Brain, Cognition, and Emotion
+    org: Korea University · National Research Foundation of Korea (NRF)
+    role: Development of an fMRI foundation model
+  - period: 2026 – Present
+    title: Brain- and Biology-Inspired AI Learning Technologies
+    org: Korea University · Institute of Information & Communications Technology Planning & Evaluation (IITP)
+    role: Development of a human–AI validation system
   - period: 2025 – Present
     title: Enhancing Brain–Body–Mind Interoceptive Indicators in Early Adolescents
     org: Korea University · National Research Foundation of Korea (NRF)
@@ -113,7 +139,7 @@ projects:
     title: Advanced Research on Real-Time fMRI-Based Neuro-Reinforcement Learning
     org: Korea University · National Research Foundation of Korea (NRF)
     role: Development of a real-time fMRI toolbox and brain decoder
-  - period: 2024 – Present
+  - period: 2024 – 2025
     title: Advancing High-Order Cognitive Neural Mechanisms in Human Modality Learning
     org: Korea University · Electronics and Telecommunications Research Institute (ETRI)
     role: Development of an fMRI encoder and multimodal LLM; group leader (2025)
@@ -125,6 +151,10 @@ projects:
     org: Sangmyung University
 
 awards:
+  - year: 2026
+    title: Oral Presentation
+    org: Real-Time Functional Imaging and Neurofeedback Meeting (rtFIN 2026), Geneva
+    detail: Whole-Brain Breath-State Real-Time fMRI Neurofeedback Links Decoder-Guided Regulation to Salience-Network
   - year: 2026
     title: Encouragement Paper Award
     org: Brain & AI Symposium, Brain Engineering Society of Korea
